@@ -47,6 +47,7 @@ Detailed Plan has not finished yet.
 # Project Schedule
 
 ![Branching](https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/assets/schedule.png)
+<center>[Click to see the latest progres](./progres.html)</center><br>
 
 ---
 
