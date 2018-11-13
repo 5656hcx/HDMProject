@@ -8,11 +8,10 @@ layout: custom
 
 ---
 
-# Latest Progress
+# Latest News
 
-<span id="cg">Local Time</span>
-<script>setInterval("cg.innerHTML=new Date().toLocaleString()",1000);</script><br>
-No Event Available At Present.
+No recent event available at present.
+For more events, please refer to [Activity Page](./activity.html).
 
 ---
 
