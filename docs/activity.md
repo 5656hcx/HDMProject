@@ -8,7 +8,7 @@ layout: activity
 - Project website
 - Gantt chart 
 - Data description
-- <a href="">meeting _note_181114</a>
+- <a href="">Click to download meeting note</a>
 
 ---
 
