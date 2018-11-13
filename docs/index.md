@@ -1,5 +1,5 @@
 ---
-layout: custom
+layout: home
 ---
 
 # Project Overview
