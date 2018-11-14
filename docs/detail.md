@@ -40,8 +40,6 @@ specific objectives are:
 
 &emsp;&emsp;Software development will utilize Waterfall model of software development [14]. The waterfall model is suitable because this work will result in a working prototype and not a commercial product. The main priority of this project is functional software prototype that will effectively deal with analytics of highly dimensional noisy data. The theoretical technological and engineering aspects of the software development will be considered and deployed as a secondary priority in this project.
 
-Detailed Plan has not finished yet.
-
 ---
 
 # Project Schedule

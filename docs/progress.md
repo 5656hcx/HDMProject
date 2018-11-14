@@ -4,10 +4,12 @@ layout: progress
 
 # Agile Project Plan
 
-No record.
+Updated on 14-Nov-2018
+![Branching](https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/assets/workflow.png)
 
 ---
 
 # Gantt chart
 
-No record.
+Updated on 14-Nov-2018
+![Branching](https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/assets/ganttchart.png)
