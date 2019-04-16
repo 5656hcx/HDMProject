@@ -34,6 +34,12 @@ specific objectives are:
 ![Branching](https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/assets/workflow.png)
 <center>Figure 2.System Workflow</center><br>
 
+![Branching](https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/assets/processdiagram.png)
+<center>Figure 3.Process Diagram</center><br>
+
+![Branching](https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/assets/conceptualdiagram.png)
+<center>Figure 4.Conceptural Diagram</center><br>
+
 ---
 
 # Project Plan
@@ -72,3 +78,6 @@ specific objectives are:
 
 - <a href="https://github.com/5656hcx/HDMProject/raw/master/docs/Heart_Disease_Monitoring_Poster.pdf">Poster</a>
 - <a href="https://github.com/5656hcx/HDMProject/raw/master/docs/Project_Proposal.pdf">Proposal</a>
+- <a href="https://github.com/5656hcx/HDMProject/raw/master/docs/Software_Development_Plan.pdf">Software Development Plan</a>
+- <a href="https://github.com/5656hcx/HDMProject/raw/master/docs/DataTypes_Heart_Disease-Symptoms.xlsx">Data Types</a>
+- <a href="https://github.com/5656hcx/HDMProject/raw/master/docs/DataDescription_Heart_Disease.xlsx">Data Description</a>

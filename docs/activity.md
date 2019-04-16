@@ -17,9 +17,6 @@ layout: activity
 - Preparition for the first experiment
 - <a href="https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/notes/minutes_190310.pdf">Click to download meeting note</a>
 
-2019/02/26
-
-
 2018/11/15 - Group Meeting 
 - Project website
 - Detailed Design of system
@@ -39,4 +36,7 @@ layout: activity
 
 # Special Activities
 
-No record.
+2019/03/13 - Workshop for presentation
+- Prepare 10 slides powerpoint slide
+- Everyone give a 10min presentation
+- Students and supervisors give comments
