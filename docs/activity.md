@@ -4,13 +4,18 @@ layout: activity
 
 # Weekly Meetings
 
+2019/04/19
+- Discussion about project progress
+- Discussion about software logic
+- Design the second experiment (accuracy of bands)
+- <a href="https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/notes/minutes_190419.pdf">Click to download meeting note</a>
+
 2019/03/25
 - Data collection of first experiment
 - Data validation of first experiment
 - Experiment design (draft)
 - Discussion about software development
 - <a href="https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/notes/minutes_190325.pdf">Click to download meeting note</a>
-
 
 2019/03/10
 - Device configuration
@@ -35,6 +40,13 @@ layout: activity
 ---
 
 # Special Activities
+
+2019/04/20 - Experiment: Accuracy of smart bands
+- Design experiment protocol
+- 3 participants + 15 testing bands + Medical devices
+- Compare data collected from different wrists
+- Compare data collected from different bands
+- Compare data collected from bands and medical devices
 
 2019/03/13 - Workshop for presentation
 - Prepare 10 slides powerpoint slide
