@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.comp3050.hearthealthmonitor">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <service
+            android:name=".service.DatabaseSyncService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".service.MonitoringService"
+            android:enabled="true"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DeveloperActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/label_developer"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/label_about"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.DataListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/label_data"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.DataChartActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/label_hr_chart"
+            android:parentActivityName=".activity.DataListActivity" />
+        <activity
+            android:name=".activity.MessageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/label_message"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

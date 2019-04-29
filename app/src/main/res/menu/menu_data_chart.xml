@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/choose_date"
+        android:icon="@drawable/favicon_choose_date"
+        android:title="@string/menu_choose_date"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/switch_view"
+        android:title="@string/menu_switch_view"
+        app:showAsAction="ifRoom" />
+</menu>

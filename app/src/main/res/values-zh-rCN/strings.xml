@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">心脏健康监控</string>
+    <string name="toast_dependency_lost">警告：\n未找到GadgetBridge应用程式。\n请您先点击下面的按钮下载安装。</string>
+    <string name="button_view_message">查看归档消息</string>
+    <string name="button_view_data">查看健康数据记录</string>
+    <string name="button_developer">开发人员页面</string>
+    <string name="button_about">更多项目信息</string>
+    <string name="menu_open_browser">在外部浏览器中查看</string>
+    <string name="label_about">更多项目信息</string>
+    <string name="text_time">时间</string>
+    <string name="text_steps">步数</string>
+    <string name="label_data">您的健康记录</string>
+    <string name="menu_choose_date">选择日期</string>
+    <string name="menu_chart">在图表中查看心率或血压</string>
+    <string name="menu_view_abnormal">查看异常数据</string>
+    <string name="text_no_record">今天还没有数据呢呜。</string>
+    <string name="text_hr_info">关于您的心率</string>
+    <string name="button_dismiss">我知道了</string>
+    <string name="text_hr_alert">你的静息心率是指当你不在运动时，你心脏泵出的所需要的最低血液量。\n\n如果你坐着或躺着，平静、放松并且没有生病，你的心率通常在60到100之间 (每分钟心跳)。</string>
+    <string name="label_hr_chart">心率折线图</string>
+    <string name="label_bp_chart">血压折线图</string>
+    <string name="menu_switch_view">切换 心率/血压</string>
+    <string name="text_bp_info">关于您的血压</string>
+    <string name="button_next_page">下一页</string>
+    <string name="button_prev_page">上一页</string>
+    <string name="text_bp_alert_1">血压是血液推动血管壁的力量。它是以每毫米汞柱（mmHg）为单位测量的。\n\n收缩压(高压)是心脏跳动时的压力。舒张压(低压)是心脏在两次心跳之间静息时的压力。</string>
+    <string name="text_bp_alert_2">正常血压应低于120/80毫米汞柱。\n\n如果您是成年人，并且您的收缩压为120到129同时舒张压小于80，这表明您有血压升高的情况。\n\n高血压是一种收缩压130或更高，或舒张压80或更高的血压，随着时间的推移保持在较高水平。</string>
+    <string name="toast_bp_stage1">高血压 Stage 1</string>
+    <string name="toast_bp_stage2">高血压 Stage 2</string>
+    <string name="toast_bp_crisis">高血压危象</string>
+    <string name="text_systolic_bp">收缩压</string>
+    <string name="text_diastolic_bp">舒张压</string>
+    <string name="toast_bp_crisis_todo">如果超出请立即联系医生</string>
+    <string name="button_download">下载</string>
+    <string name="button_exit">退出</string>
+    <string name="toast_db_updating">请稍等。数据库正在更新。</string>
+    <string name="legend_your_hr">"您的心率 — "</string>
+    <string name="legend_sbp">"收缩压 — "</string>
+    <string name="legend_dbp">"舒张压 — "</string>
+    <string name="menu_refresh">刷新列表</string>
+    <string name="text_info">重要信息</string>
+    <string name="text_list_legend">健康记录列表显示所有从智能设备中获取的数据，甚至包含那些没有正确收集的数据（如当手环未佩戴时）。因此，某些偏离过大的数据也可能被标记为不正常的健康数据（比如 -1 或 255）。当显示为图表时，这些偏离过大的数据会被筛除以更合理地显示趋势。\n\n列表中的图例:</string>
+    <string name="legend_hbp_crisis">高血压 Crisis (收缩压&gt;=180或舒张压&gt;=120)</string>
+    <string name="legend_hbp_stage_1">高血压 Stage 1 (收缩压&gt;=130或舒张压&gt;=80)</string>
+    <string name="legend_hbp_stage_2">高血压 Stage 2 (收缩压&gt;=140或舒张压&gt;=90)</string>
+    <string name="legend_hr_too_fast">心率过速 (静息心率&gt;100)</string>
+    <string name="legend_hr_too_slow">心率过缓 (静息心率&lt;60)</string>
+    <string name="label_message">已归档的消息</string>
+    <string name="menu_sort_msg">查看排序 …</string>
+    <string name="text_bp">血压</string>
+    <string name="text_hr">心率</string>
+    <string name="text_sort_msg">选择排序</string>
+    <string name="sort_time_asc">时间 (最新在后)</string>
+    <string name="sort_time_desc">时间 (最新在前)</string>
+    <string name="sort_type_asc">类型 (最重要在后)</string>
+    <string name="sort_type_desc">类型 (最重要在前)</string>
+    <string name="text_delete_confirm">您确定要清空所有消息吗？此操作将不可逆！</string>
+    <string name="label_developer">开发人员页面</string>
+    <string name="text_no_message">目前还没有消息呢呜。</string>
+    <string name="text_unknow_type">未知消息类型</string>
+</resources>
