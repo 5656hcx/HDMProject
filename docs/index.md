@@ -10,9 +10,7 @@ layout: home
 
 # Project Demos
 
-<center class="half">
-    <img src="https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/assets/Demo/Screenshot_List_View.png" width = 40% height = 40% /><img src="https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/assets/Demo/Screenshot_Chart_View_Blood_Pressure_1.png" width = 40% height = 40% /><img src="https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/assets/Demo/Screenshot_Message_View_1.png" width = 40% height = 40% />
-</center>
+[Click here to view project demo](https://github.com/5656hcx/HDMProject)<br>
 
 ---
 
