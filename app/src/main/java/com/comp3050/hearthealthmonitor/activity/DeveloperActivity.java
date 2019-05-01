@@ -6,6 +6,10 @@ import android.view.MenuItem;
 
 import com.comp3050.hearthealthmonitor.R;
 
+/** Developer Activity
+ *  Designed for development control, such as notification test and manually data analyse
+ **/
+
 public class DeveloperActivity extends AppCompatActivity {
 
     @Override

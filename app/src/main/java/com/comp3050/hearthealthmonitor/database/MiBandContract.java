@@ -2,6 +2,8 @@ package com.comp3050.hearthealthmonitor.database;
 
 import android.net.Uri;
 
+/** Contract class for Gadgetbride content provider **/
+
 public final class MiBandContract {
     public static final String AUTHORITY = "com.getmiband.android.provider";
     public static final Uri URI = Uri.parse("content://" + AUTHORITY + "/miBand");

@@ -14,6 +14,10 @@ import android.webkit.WebViewClient;
 
 import com.comp3050.hearthealthmonitor.R;
 
+/** About Activity
+ *  Display more information of this project
+ **/
+
 public class AboutActivity extends AppCompatActivity {
 
     private static final String URL_PROJECT = "https://5656hcx.github.io/HDMProject/index.html";

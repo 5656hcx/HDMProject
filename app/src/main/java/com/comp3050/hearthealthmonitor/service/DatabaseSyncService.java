@@ -11,6 +11,11 @@ import com.comp3050.hearthealthmonitor.database.DBHelper;
 import com.comp3050.hearthealthmonitor.database.MiBandContract;
 import com.comp3050.hearthealthmonitor.utility.C_Database;
 
+/** An intent service to perform following core tasks：
+ *  1. check if there is new data from smart bands
+ *  2. fetch the new data and store it to private database
+ **/
+
 public class DatabaseSyncService extends IntentService {
 
     public DatabaseSyncService() {
@@ -56,6 +61,7 @@ public class DatabaseSyncService extends IntentService {
                     } catch (SQLiteException ignored) {}
                 }
                 import_cursor.close();
+                startService(new Intent(this, CheckDataService.class));
             }
         }
     }

@@ -11,6 +11,10 @@ import android.view.View;
 import com.comp3050.hearthealthmonitor.R;
 import com.comp3050.hearthealthmonitor.service.MonitoringService;
 
+/** Main Activity
+ *  The main entry of application
+ **/
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String DOWNLOAD_PAGE = "https://raw.githubusercontent.com/5656hcx/Gadgetbridge/master/app/release/app-release.apk";
@@ -21,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
-            checkDependency();
-            startService(new Intent(this, MonitoringService.class));
+            if (checkDependency())
+                startService(new Intent(this, MonitoringService.class));
         }
     }
 
-    private void checkDependency() {
+    private boolean checkDependency() {
         Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_LAUNCHER);
         intent.setPackage(SOURCE_PACKAGE);
@@ -48,7 +52,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
             builder.setCancelable(false).show();
+            return false;
         }
+        return true;
     }
 
     public void viewOtherActivities(View view) {

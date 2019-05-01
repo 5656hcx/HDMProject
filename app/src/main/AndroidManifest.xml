@@ -14,16 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <service
+            android:name=".service.CheckDataService"
+            android:exported="false"></service>
         <service
             android:name=".service.DatabaseSyncService"
             android:enabled="true"
             android:exported="false" />
-
         <service
             android:name=".service.MonitoringService"
             android:enabled="true"
             android:exported="false" />
+
         <activity
             android:name=".activity.DeveloperActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
@@ -48,6 +50,7 @@
             android:name=".activity.MessageActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/label_message"
+            android:launchMode="singleTask"
             android:parentActivityName=".activity.MainActivity" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>

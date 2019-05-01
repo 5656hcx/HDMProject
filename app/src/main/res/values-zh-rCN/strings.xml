@@ -25,13 +25,11 @@
     <string name="button_next_page">下一页</string>
     <string name="button_prev_page">上一页</string>
     <string name="text_bp_alert_1">血压是血液推动血管壁的力量。它是以每毫米汞柱（mmHg）为单位测量的。\n\n收缩压(高压)是心脏跳动时的压力。舒张压(低压)是心脏在两次心跳之间静息时的压力。</string>
-    <string name="text_bp_alert_2">正常血压应低于120/80毫米汞柱。\n\n如果您是成年人，并且您的收缩压为120到129同时舒张压小于80，这表明您有血压升高的情况。\n\n高血压是一种收缩压130或更高，或舒张压80或更高的血压，随着时间的推移保持在较高水平。</string>
-    <string name="toast_bp_stage1">高血压 Stage 1</string>
-    <string name="toast_bp_stage2">高血压 Stage 2</string>
-    <string name="toast_bp_crisis">高血压危象</string>
+    <string name="text_bp_alert_2">正常血压应低于120/80毫米汞柱。\n\n如果您是成年人，并且您的收缩压为120到139同时舒张压为80到89，这表明您有高血压前期的情况。\n\n高血压前期是指血压略高于正常值。高血压前期会增加将来患上慢性或长期高血压的风险。</string>
+    <string name="toast_prehypertension">高血压前期</string>
+    <string name="toast_hypertension">高血压</string>
     <string name="text_systolic_bp">收缩压</string>
     <string name="text_diastolic_bp">舒张压</string>
-    <string name="toast_bp_crisis_todo">如果超出请立即联系医生</string>
     <string name="button_download">下载</string>
     <string name="button_exit">退出</string>
     <string name="toast_db_updating">请稍等。数据库正在更新。</string>
@@ -41,9 +39,6 @@
     <string name="menu_refresh">刷新列表</string>
     <string name="text_info">重要信息</string>
     <string name="text_list_legend">健康记录列表显示所有从智能设备中获取的数据，甚至包含那些没有正确收集的数据（如当手环未佩戴时）。因此，某些偏离过大的数据也可能被标记为不正常的健康数据（比如 -1 或 255）。当显示为图表时，这些偏离过大的数据会被筛除以更合理地显示趋势。\n\n列表中的图例:</string>
-    <string name="legend_hbp_crisis">高血压 Crisis (收缩压&gt;=180或舒张压&gt;=120)</string>
-    <string name="legend_hbp_stage_1">高血压 Stage 1 (收缩压&gt;=130或舒张压&gt;=80)</string>
-    <string name="legend_hbp_stage_2">高血压 Stage 2 (收缩压&gt;=140或舒张压&gt;=90)</string>
     <string name="legend_hr_too_fast">心率过速 (静息心率&gt;100)</string>
     <string name="legend_hr_too_slow">心率过缓 (静息心率&lt;60)</string>
     <string name="label_message">已归档的消息</string>
@@ -53,10 +48,16 @@
     <string name="text_sort_msg">选择排序</string>
     <string name="sort_time_asc">时间 (最新在后)</string>
     <string name="sort_time_desc">时间 (最新在前)</string>
-    <string name="sort_type_asc">类型 (最重要在后)</string>
-    <string name="sort_type_desc">类型 (最重要在前)</string>
+    <string name="sort_type_asc">类型 (重要在后)</string>
+    <string name="sort_type_desc">类型 (重要在前)</string>
     <string name="text_delete_confirm">您确定要清空所有消息吗？此操作将不可逆！</string>
     <string name="label_developer">开发人员页面</string>
     <string name="text_no_message">目前还没有消息呢呜。</string>
     <string name="text_unknow_type">未知消息类型</string>
+    <string name="text_dateformat">yyyy年MM月dd日 HH:mm:ss</string>
+    <string name="legend_hypertension">高血压 (收缩压>=140或舒张压>=90)</string>
+    <string name="legend_prehypertension">高血压前期 (收缩压>=120或舒张压>=80)</string>
+    <string name="radio_hypertension">高血压</string>
+    <string name="radio_prehypertension">高血压前期</string>
+    <string name="not_implemented">这个页面丢失了呢呜。</string>
 </resources>

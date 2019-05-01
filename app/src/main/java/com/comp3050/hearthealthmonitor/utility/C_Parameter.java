@@ -11,10 +11,8 @@ public class C_Parameter {
 
     public static final int BP_UPPER_BOUND = 300;
     public static final int BP_LOWER_BOUND = 0;
-    public static final int SBP_HYPERTENSIVE_CRISIS = 180;
-    public static final int DBP_HYPERTENSIVE_CRISIS = 120;
-    public static final int SBP_HYPERTENSIVE_STAGE2 = 140;
-    public static final int DBP_HYPERTENSIVE_STAGE2 = 90;
-    public static final int SBP_HYPERTENSIVE_STAGE1 = 130;
-    public static final int DBP_HYPERTENSIVE_STAGE1 = 80;
+    public static final int SBP_PREHYPERTENSION = 120;
+    public static final int DBP_PREHYPERTENSION = 80;
+    public static final int SBP_HYPERTENSION = 140;
+    public static final int DBP_HYPERTENSION = 90;
 }

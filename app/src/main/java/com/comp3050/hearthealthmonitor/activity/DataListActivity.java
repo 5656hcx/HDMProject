@@ -31,6 +31,10 @@ import com.comp3050.hearthealthmonitor.database.DBHelper;
 import com.comp3050.hearthealthmonitor.utility.C_Database;
 import com.comp3050.hearthealthmonitor.utility.C_Parameter;
 
+/** Data Chart Activity
+ *  Display the steps, heart rate and blood pressure in list
+ **/
+
 public class DataListActivity extends AppCompatActivity {
 
     private static final int REQUEST_CHANGED_DATE = 0x0a;
@@ -186,12 +190,10 @@ public class DataListActivity extends AppCompatActivity {
             textView.setText(blood_pressure);
 
             if (indicateAbnormal) {
-                if (systolicBP >= C_Parameter.SBP_HYPERTENSIVE_CRISIS || diastolicBP >= C_Parameter.DBP_HYPERTENSIVE_CRISIS)
-                    textView.setTextColor(ListTextColors.HBP_CRISIS);
-                else if (systolicBP >= C_Parameter.SBP_HYPERTENSIVE_STAGE2 || diastolicBP >= C_Parameter.DBP_HYPERTENSIVE_STAGE2)
-                    textView.setTextColor(ListTextColors.HBP_STAGE_2);
-                else if (systolicBP >= C_Parameter.SBP_HYPERTENSIVE_STAGE1 || diastolicBP >= C_Parameter.DBP_HYPERTENSIVE_STAGE1)
-                    textView.setTextColor(ListTextColors.HBP_STAGE_1);
+                if (systolicBP >= C_Parameter.SBP_HYPERTENSION || diastolicBP >= C_Parameter.DBP_HYPERTENSION)
+                    textView.setTextColor(ListTextColors.HBP_HYPERTENSION);
+                else if (systolicBP >= C_Parameter.SBP_PREHYPERTENSION|| diastolicBP >= C_Parameter.DBP_PREHYPERTENSION)
+                    textView.setTextColor(ListTextColors.HBP_PREHYPERTENSION);
                 else
                     textView.setTextColor(ListTextColors.NORMAL);
                 final int heart_rate = cursor.getInt(cursor.getColumnIndex(C_Database.HEART_RATE));
@@ -210,8 +212,7 @@ public class DataListActivity extends AppCompatActivity {
         static final int NORMAL = Color.DKGRAY;
         static final int HR_TOO_FAST = Color.RED;
         static final int HR_TOO_SLOW = Color.BLUE;
-        static final int HBP_STAGE_1 = Color.BLUE;
-        static final int HBP_STAGE_2 = Color.MAGENTA;
-        static final int HBP_CRISIS = Color.RED;
+        static final int HBP_PREHYPERTENSION = Color.MAGENTA;
+        static final int HBP_HYPERTENSION = Color.RED;
     }
 }

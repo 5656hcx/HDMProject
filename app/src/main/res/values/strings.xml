@@ -24,18 +24,15 @@
     <string name="menu_switch_view">Switch HR/BP</string>
     <string name="text_bp_info">About your blood pressure</string>
     <string name="text_bp_alert_1">"Blood pressure is the force of blood pushing against blood vessel walls. It is measured in millimeters of mercury (mmHg).\n\nSystolic BP (the top) is the pressure when the heart beats. Diastolic BP (the bottom) is the pressure when the heart rests between beats."</string>
-    <string name="text_bp_alert_2">Normal blood pressure is below 120/80 mm Hg.\n\nIf you’re an adult and your systolic pressure is 120 to 129, and your diastolic pressure is less than 80, you have elevated blood pressure.\n\nHigh blood pressure is a pressure of 130 systolic or higher, or 80 diastolic or higher, that stays high over time.</string>
+    <string name="text_bp_alert_2">Normal blood pressure is below 120/80 mm Hg.\n\nIf you’re an adult and your systolic pressure is 120 to 139, and your diastolic pressure is 80 to 89, you have pre-hypertension.\n\nPre-hypertension is blood pressure that is slightly higher than normal. Pre-hypertension increases the risk that you will develop chronic, or long-lasting, high blood pressure in the future.</string>
     <string name="button_next_page">Continue</string>
     <string name="button_prev_page">Back</string>
-    <string name="radio_stage_1" translatable="false">HBP Stage 1</string>
-    <string name="radio_stage_2" translatable="false">HBP Stage 2</string>
-    <string name="radio_crisis" translatable="false">HBP Crisis</string>
-    <string name="toast_bp_crisis">Hypertensive Crisis</string>
-    <string name="toast_bp_stage2">Hypertension Stage 2</string>
-    <string name="toast_bp_stage1">Hypertension Stage 1</string>
+    <string name="radio_prehypertension">Pre-Hypertension</string>
+    <string name="radio_hypertension">Hypertension</string>
+    <string name="toast_hypertension">Hypertension</string>
+    <string name="toast_prehypertension">Pre-Hypertension</string>
     <string name="text_systolic_bp">Systolic Pressure</string>
     <string name="text_diastolic_bp">Diastolic Pressure</string>
-    <string name="toast_bp_crisis_todo">Consult your doctor immediately if meet</string>
     <string name="button_download">DOWNLOAD</string>
     <string name="button_exit">EXIT</string>
     <string name="toast_db_updating">Please wait. Database is updating.</string>
@@ -47,9 +44,6 @@
     <string name="text_list_legend">The health record list shows all the data from smart devices, even those that are not correctly collected (e.g. when the band is not worn). Therefore, some data that deviates too much may also be marked as abnormal health data (e.g. -1 or 255). When you select chart view, these data that deviate too much are filtered out to show trends more reasonably.\n\nLegend of list view:</string>
     <string name="legend_hr_too_fast">HR faster than normal (Resting HR&gt;100)</string>
     <string name="legend_hr_too_slow">HR slower than normal (Resting HR&lt;60)</string>
-    <string name="legend_hbp_stage_1">HBP Stage 1 (SBP&gt;=130 or DBP&gt;=80)</string>
-    <string name="legend_hbp_stage_2">HBP Stage 2 (SBP&gt;=140 or DBP&gt;=90)</string>
-    <string name="legend_hbp_crisis">HBP Crisis (SBP&gt;=180 or DBP&gt;=120)</string>
     <string name="label_message">Archived Messages</string>
     <string name="menu_sort_msg">Sort Messages By …</string>
     <string name="text_sort_msg">Sort Message By</string>
@@ -61,4 +55,39 @@
     <string name="text_no_message">No message available.</string>
     <string name="label_developer">Developer Page</string>
     <string name="text_unknow_type">Unknown Message Type</string>
+    <string name="text_dateformat">MMM dd yyyy HH:mm:ss</string>
+    <string name="legend_prehypertension">Pre-Hypertension (SBP >= 120 or DBP >= 80)</string>
+    <string name="legend_hypertension">Hypertension (SBP >= 140 or DBP >= 90)</string>
+    <string name="message_bp_effect_1" translatable="false">High blood pressure can burst or block arteries that supply blood and oxygen to the brain, causing a stroke. Stroke can cause serious disabilities in speech, movement, and other basic activities, and a stroke can kill you.</string>
+    <string name="message_bp_effect_2" translatable="false">High blood pressure can harden your arteries, which decreases the flow of blood and oxygen to your heart and lead to multiple kinds of heart diseases.</string>
+    <string name="message_bp_effect_3" translatable="false">High blood pressure can cause chest pain, which also called angina. If you often feel chest pain and your blood pressure exceeds hypertension limits, you should see a doctor.</string>
+    <string name="message_bp_effect_4" translatable="false">High blood pressure can cause heart attack. Most heart attacks involve discomfort in the center or left side of the chest that lasts for more than a few minutes, or that goes away and comes back.</string>
+    <string name="message_bp_effect_5" translatable="false">High blood pressure can cause heart failure. Common symptoms of heart failure include: 1.Shortness of breath during daily activities; 2.Having trouble breathing when lying down; 3.Generally feeling tired or weak.</string>
+    <string name="message_bp_suggestion_1" translatable="false">High level of sodium(salt) intake contributes to hypertension. You should change to healthy diet which is: 1.Low in salt (sodium), total fat, saturated fat, and cholesterol; 2.High in fresh fruits and vegetables.</string>
+    <string name="message_bp_suggestion_2" translatable="false">An active lifestyle helps to reduce hypertension. Try avoid obesity and a sedentary lifestyle by taking a brisk 10-minute walk 3 times a day 5 days a week.</string>
+    <string name="message_bp_suggestion_3" translatable="false">Do not smoke. If you smoke, quit as soon as possible.</string>
+    <string name="message_bp_suggestion_4" translatable="false">Do not drink excessively. Limit your drinking to two drink for man or one drink for woman.</string>
+    <string name="message_bp_suggestion_5" translatable="false">Track your heart pressure data and abnormal symptoms each day. If you have conditions of heart failure or heart attack, please see your doctor immediately.</string>
+    <string name="message_hbp_detected_title" translatable="false">You heart may have hypertension</string>
+    <string name="message_hbp_detected_summary" translatable="false">Your recent blood pressure is higher than the limit of hypertension.</string>
+    <string name="message_pre_hbp_detected_title" translatable="false">You heart may have pre-hypertension</string>
+    <string name="message_pre_hbp_detected_summary" translatable="false">Your recent blood pressure is higher than the limit of pre-hypertension.</string>
+    <string name="message_bp_ignore" translatable="false">If you are exercising or the blood pressure is recorded when you are not relaxed, you may ignore this message. You can find its archive later in the application.</string>
+    <string name="message_summary_suggestion_hbp" translatable="false">Click here to see what you should do to lower your pressure.</string>
+    <string name="message_summary_effect_hbp" translatable="false">Hypertension can damage your health in many ways. Click to see detail.</string>
+    <string name="message_racing_hr_effect_1" translatable="false">There is a strong positive association between racing heart rate and ischemic cardiac disease and sudden heart death.</string>
+    <string name="message_racing_hr_effect_2" translatable="false">Relatively high heart rate is often found with hypertension, atherosclerosis and overweight.</string>
+    <string name="message_racing_hr_effect_3" translatable="false">High heart rate is related to multiple cardiac diseases. The increase of heart rate may increase the risk in heart failure and coronary artery disease.</string>
+    <string name="message_slow_hr_effect_1" translatable="false">Low heart rate may cause insufficient blood supply in your heart. Usual symptoms include chest tightness, headache, dizziness and even Loss of consciousness.</string>
+    <string name="message_racing_hr_suggestion_1" translatable="false">You should ensure enough sleeping time to improve heart rate condition. For adults, we recommend at least 8 hours of sleep per day.</string>
+    <string name="message_racing_hr_suggestion_2" translatable="false">You should keep a healthy lifestyle. Ensure adequate daily exercise. Do not smoke and drink excessively.</string>
+    <string name="message_racing_hr_suggestion_3" translatable="false">Keep the air clean. Avoid exposure to tobacco smoke and stop outdoor activities when the air condition is bad.</string>
+    <string name="message_slow_hr_suggestion_1" translatable="false">There is no optimal heart rate for individuals. If you have symptoms listed above, we encourage you to discuss with your doctor.</string>
+    <string name="message_hr_racing_title" translatable="false">Your heart is pumping faster than normal</string>
+    <string name="message_hr_slow_title" translatable="false">Your heart is pumping slower than normal</string>
+    <string name="message_hr_racing_detected_summary" translatable="false">Your recent heart rate is higher than 100 beats per minute. Click here to see detail.</string>
+    <string name="message_hr_slow_detected_summary" translatable="false">Your recent heart rate is less than 60 beats per minute. Click here to see detail.</string>
+    <string name="message_hr_ignore" translatable="false">If you are exercising or the heart rate is recorded when you are not resting, you may ignore this message. You can find its archive later in the application.</string>
+    <string name="message_general_suggestion" translatable="false">If you have any listed symptoms or other uncomfortable feelings, we recommend you to contact your doctor.</string>
+    <string name="not_implemented">This Page has not yet implemented</string>
 </resources>

@@ -4,6 +4,8 @@ import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
+import android.icu.text.SimpleDateFormat;
+import android.icu.util.Calendar;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +25,12 @@ import com.comp3050.hearthealthmonitor.database.DBHelper;
 import com.comp3050.hearthealthmonitor.entity.MyMessage;
 import com.comp3050.hearthealthmonitor.utility.C_Database;
 
+/** Message Activity
+ *  Clients are able to view all archived message here
+ *  Each message has its timestamp, title, content, summary and importance
+ *  Messages can be sorted by their importance and time
+ **/
+
 public class MessageActivity extends AppCompatActivity {
 
     private String sortOrder = C_Database.TIMESTAMP + " DESC";
@@ -35,10 +43,11 @@ public class MessageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
 
+        long rowId = getIntent().getLongExtra("data", -1);
         try {
             database = new DBHelper(this).getReadableDatabase();
             recyclerView = findViewById(R.id.recycler);
-            updateRecycler();
+            updateRecycler(rowId);
         } catch (SQLiteException ex) {
             Toast.makeText(this, R.string.toast_db_updating, Toast.LENGTH_SHORT).show();
         }
@@ -86,7 +95,7 @@ public class MessageActivity extends AppCompatActivity {
                         sortOrderIndex = which;
                         if (!newOrder.equals(sortOrder)) {
                             sortOrder = newOrder;
-                            updateRecycler();
+                            updateRecycler(-1);
                         }
                         dialog.dismiss();
                     }
@@ -102,7 +111,7 @@ public class MessageActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    private void showMessageDetail(int rowId) {
+    private void showMessageDetail(long rowId) {
         if (database != null) {
             String selection = C_Database.ID + " =?";
             String[] selectionArgs = new String[] { String.valueOf(rowId) };
@@ -118,7 +127,7 @@ public class MessageActivity extends AppCompatActivity {
         }
     }
 
-    private void updateRecycler() {
+    private void updateRecycler(long rowIdToShow) {
         if (database != null) {
             Cursor cursor = database.query(DBHelper.TABLE_NAME_MSG,
                     null, null, null, null, null, sortOrder);
@@ -127,33 +136,37 @@ public class MessageActivity extends AppCompatActivity {
                 MyAdapter adapter = new MyAdapter(cursor);
                 adapter.setOnItemClickListener(new OnItemClickListener() {
                     @Override
-                    public void onItemClick(View view, int position, int rowId) {
+                    public void onItemClick(View view, int position, long rowId) {
                         showMessageDetail(rowId);
                     }
 
                     @Override
-                    public void onItemLongClick(View view, int position, int rowId) {
+                    public void onItemLongClick(View view, int position, long rowId) {
                         showMessageDetail(rowId);
                     }
                 });
                 recyclerView.setLayoutManager(new LinearLayoutManager(this));
                 recyclerView.setAdapter(adapter);
+
+                if (rowIdToShow != -1) showMessageDetail(rowIdToShow);
             }
         }
     }
 
     private interface OnItemClickListener {
-        void onItemClick(View view, int position, int rowId);
-        void onItemLongClick(View view, int position, int rowId);
+        void onItemClick(View view, int position, long rowId);
+        void onItemLongClick(View view, int position, long rowId);
     }
 
     private class MyAdapter extends RecyclerView.Adapter {
 
         private OnItemClickListener onItemClickListener;
+        private Calendar calendar;
         private final Cursor cursor;
 
         MyAdapter(Cursor cursor) {
             this.cursor = cursor;
+            this.calendar = Calendar.getInstance();
         }
 
         void setOnItemClickListener(OnItemClickListener onItemClickListener) {
@@ -171,8 +184,10 @@ public class MessageActivity extends AppCompatActivity {
             final MyViewHolder myViewHolder = (MyViewHolder) viewHolder;
             if (cursor.moveToPosition(position)) {
                 MyMessage.MessageType type = MyMessage.importanceToType(cursor.getInt(cursor.getColumnIndex(C_Database.IMPORTANCE)));
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat(getString(R.string.text_dateformat));
+                calendar.setTimeInMillis(cursor.getLong(cursor.getColumnIndex(C_Database.TIMESTAMP)));
                 myViewHolder.type.setText(type == null ? getString(R.string.text_unknow_type) : type.toString());
-                myViewHolder.time.setText(cursor.getString(cursor.getColumnIndex(C_Database.TIMESTAMP)));
+                myViewHolder.time.setText(simpleDateFormat.format(calendar.getTime()));
                 myViewHolder.title.setText(cursor.getString(cursor.getColumnIndex(C_Database.TITLE)));
                 myViewHolder.summary.setText(cursor.getString(cursor.getColumnIndex(C_Database.SUMMARY)));
 

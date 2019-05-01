@@ -6,10 +6,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.comp3050.hearthealthmonitor.utility.C_Database;
 
+/** Extended database open helper class **/
+
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "health_database";
-    public static final String TABLE_NAME_DATA = "miband_data";
+    public static final String TABLE_NAME_DATA = "band_data";
     public static final String TABLE_NAME_MSG = "message_archive";
 
     private static final String SQL_DROP_DATA = "DROP TABLE IF EXISTS " + TABLE_NAME_DATA;

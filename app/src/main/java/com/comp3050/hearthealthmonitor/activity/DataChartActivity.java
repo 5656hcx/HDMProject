@@ -42,6 +42,10 @@ import lecho.lib.hellocharts.model.PointValue;
 import lecho.lib.hellocharts.model.Viewport;
 import lecho.lib.hellocharts.view.LineChartView;
 
+/** Data Chart Activity
+ *  Display the heart rate and blood pressure in chart
+ **/
+
 public class DataChartActivity extends AppCompatActivity {
 
     private boolean isHeartRate;
@@ -196,12 +200,10 @@ public class DataChartActivity extends AppCompatActivity {
             axisY.setName(getString(R.string.text_bp));
             List<PointValue> sbp_values = new ArrayList<>();
             List<PointValue> dbp_values = new ArrayList<>();
-            List<PointValue> sbp_crisis = new ArrayList<>();
-            List<PointValue> sbp_stage2 = new ArrayList<>();
-            List<PointValue> sbp_stage1 = new ArrayList<>();
-            List<PointValue> dbp_crisis = new ArrayList<>();
-            List<PointValue> dbp_stage2 = new ArrayList<>();
-            List<PointValue> dbp_stage1 = new ArrayList<>();
+            List<PointValue> sbp_prehypertension = new ArrayList<>();
+            List<PointValue> sbp_hypertension = new ArrayList<>();
+            List<PointValue> dbp_prehypertension = new ArrayList<>();
+            List<PointValue> dbp_hypertension = new ArrayList<>();
 
             int index = 0;
             do {
@@ -213,12 +215,10 @@ public class DataChartActivity extends AppCompatActivity {
                     axisXValues.add(new AxisValue(++index).setLabel(label));
                     sbp_values.add(new PointValue(index, sbp).setLabel(label + " " + sbp));
                     dbp_values.add(new PointValue(index, dbp).setLabel(label + " " + sbp));
-                    sbp_crisis.add(new PointValue(index, C_Parameter.SBP_HYPERTENSIVE_CRISIS));
-                    sbp_stage2.add(new PointValue(index, C_Parameter.SBP_HYPERTENSIVE_STAGE2));
-                    sbp_stage1.add(new PointValue(index, C_Parameter.SBP_HYPERTENSIVE_STAGE1));
-                    dbp_crisis.add(new PointValue(index, C_Parameter.DBP_HYPERTENSIVE_CRISIS));
-                    dbp_stage2.add(new PointValue(index, C_Parameter.DBP_HYPERTENSIVE_STAGE2));
-                    dbp_stage1.add(new PointValue(index, C_Parameter.DBP_HYPERTENSIVE_STAGE1));
+                    sbp_prehypertension.add(new PointValue(index, C_Parameter.SBP_PREHYPERTENSION));
+                    sbp_hypertension.add(new PointValue(index, C_Parameter.SBP_HYPERTENSION));
+                    dbp_prehypertension.add(new PointValue(index, C_Parameter.DBP_PREHYPERTENSION));
+                    dbp_hypertension.add(new PointValue(index, C_Parameter.DBP_HYPERTENSION));
                 }
             } while (cursor.moveToNext());
 
@@ -227,20 +227,16 @@ public class DataChartActivity extends AppCompatActivity {
             lines.add(new Line(dbp_values).setColor(Color.BLUE).setCubic(false).setFilled(false).
                     setHasPoints(true).setHasLabelsOnlyForSelected(true).setPointRadius(POINT_RADIUS).setStrokeWidth(1));
 
-            lines.add(new Line(sbp_stage1).setColor(Color.RED).setCubic(false).setFilled(false).
+            lines.add(new Line(sbp_prehypertension).setColor(Color.RED).setCubic(false).setFilled(false).
                     setHasLabels(false).setHasPoints(false).setStrokeWidth(STROKE_WIDTH));
-            lines.add(new Line(dbp_stage1).setColor(Color.BLUE).setCubic(false).setFilled(false).
-                    setHasLabels(false).setHasPoints(false).setStrokeWidth(STROKE_WIDTH));
-
-            lines.add(new Line(sbp_stage2).setColor(Color.RED).setCubic(false).setFilled(false).setHasLines(false).
-                    setHasLabels(false).setHasPoints(false).setStrokeWidth(STROKE_WIDTH));
-            lines.add(new Line(dbp_stage2).setColor(Color.BLUE).setCubic(false).setFilled(false).setHasLines(false).
+            lines.add(new Line(dbp_prehypertension).setColor(Color.BLUE).setCubic(false).setFilled(false).
                     setHasLabels(false).setHasPoints(false).setStrokeWidth(STROKE_WIDTH));
 
-            lines.add(new Line(sbp_crisis).setColor(Color.RED).setCubic(false).setFilled(false).setHasLines(false).
-                    setHasLabels(true).setHasPoints(false).setStrokeWidth(STROKE_WIDTH));
-            lines.add(new Line(dbp_crisis).setColor(Color.BLUE).setCubic(false).setFilled(false).setHasLines(false).
+            lines.add(new Line(sbp_hypertension).setColor(Color.RED).setCubic(false).setFilled(false).setHasLines(false).
                     setHasLabels(false).setHasPoints(false).setStrokeWidth(STROKE_WIDTH));
+            lines.add(new Line(dbp_hypertension).setColor(Color.BLUE).setCubic(false).setFilled(false).setHasLines(false).
+                    setHasLabels(false).setHasPoints(false).setStrokeWidth(STROKE_WIDTH));
+
         }
 
         LineChartData chartData = new LineChartData(lines);
@@ -260,7 +256,7 @@ public class DataChartActivity extends AppCompatActivity {
         else {
             RadioGroup radioGroup = findViewById(R.id.radioGroup);
             radioGroup.setVisibility(View.VISIBLE);
-            radioGroup.check(R.id.radio_stage_1);
+            radioGroup.check(R.id.radio_prehypertension);
             legend_1.setVisibility(View.VISIBLE);
             legend_2.setText(R.string.legend_dbp);
         }
@@ -344,39 +340,23 @@ public class DataChartActivity extends AppCompatActivity {
                 List<Line> lines = lineChartData.getLines();
                 String acknowledgement = "";
                 switch (checkedId) {
-                    case R.id.radio_stage_1:
-                        acknowledgement = getString(R.string.toast_bp_stage1) + "\n" +
-                                getString(R.string.text_systolic_bp)+ ": " + C_Parameter.SBP_HYPERTENSIVE_STAGE1 + "\n" +
-                                getString(R.string.text_diastolic_bp)+ ": " + C_Parameter.DBP_HYPERTENSIVE_STAGE1;
+                    case R.id.radio_prehypertension:
+                        acknowledgement = getString(R.string.toast_prehypertension) + "\n" +
+                                getString(R.string.text_systolic_bp)+ " >= " + C_Parameter.SBP_PREHYPERTENSION + "\n" +
+                                getString(R.string.text_diastolic_bp)+ " >= " + C_Parameter.DBP_PREHYPERTENSION;
                         lines.get(2).setHasLines(true);
                         lines.get(3).setHasLines(true);
                         lines.get(4).setHasLines(false);
                         lines.get(5).setHasLines(false);
-                        lines.get(6).setHasLines(false);
-                        lines.get(7).setHasLines(false);
                         break;
-                    case R.id.radio_stage_2:
-                        acknowledgement = getString(R.string.toast_bp_stage2) + "\n" +
-                                getString(R.string.text_systolic_bp)+ ": " + C_Parameter.SBP_HYPERTENSIVE_STAGE2 + "\n" +
-                                getString(R.string.text_diastolic_bp)+ ": " + C_Parameter.DBP_HYPERTENSIVE_STAGE2;
+                    case R.id.radio_hypertension:
+                        acknowledgement = getString(R.string.toast_hypertension) + "\n" +
+                                getString(R.string.text_systolic_bp)+ " >= " + C_Parameter.SBP_HYPERTENSION + "\n" +
+                                getString(R.string.text_diastolic_bp)+ " >= " + C_Parameter.DBP_HYPERTENSION;
                         lines.get(2).setHasLines(false);
                         lines.get(3).setHasLines(false);
                         lines.get(4).setHasLines(true);
                         lines.get(5).setHasLines(true);
-                        lines.get(6).setHasLines(false);
-                        lines.get(7).setHasLines(false);
-                        break;
-                    case R.id.radio_crisis:
-                        acknowledgement = getString(R.string.toast_bp_crisis) + "\n" +
-                                getString(R.string.text_systolic_bp)+ ": " + C_Parameter.SBP_HYPERTENSIVE_CRISIS + "\n" +
-                                getString(R.string.text_diastolic_bp)+ ": " + C_Parameter.DBP_HYPERTENSIVE_CRISIS + "\n" +
-                                getString(R.string.toast_bp_crisis_todo);
-                        lines.get(2).setHasLines(false);
-                        lines.get(3).setHasLines(false);
-                        lines.get(4).setHasLines(false);
-                        lines.get(5).setHasLines(false);
-                        lines.get(6).setHasLines(true);
-                        lines.get(7).setHasLines(true);
                         break;
                 }
                 toast.setText(acknowledgement);
