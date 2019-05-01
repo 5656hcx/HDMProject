@@ -10,14 +10,14 @@ layout: home
 
 # Project Demos
 
-No record available at present.<br>
+![Demo](https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/assets/Demo/Screenshot_List_View.png)![Demo](https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/assets/Demo/Screenshot_Message_View_1.png)![Demo](https://raw.githubusercontent.com/5656hcx/HDMProject/master/docs/assets/Demo/Screenshot_Chart_View_Blood_Pressure_1.png)
 
 ---
 
 # Latest News
 
-No record available at present.<br>
-Please refer to our [Activities](./activity.html) for all records.
+2019.05.01 Version 1.1.0 Updated<br>
+2019.04.28 Version 1.0.0 Updated<br>
 
 ---
 
