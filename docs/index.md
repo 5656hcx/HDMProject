@@ -11,6 +11,7 @@ layout: home
 # Project Demos
 
 [Click here to view project demo](https://github.com/5656hcx/HDMProject)<br>
+[Click here to view activities](./activity.html)<br>
 
 ---
 
